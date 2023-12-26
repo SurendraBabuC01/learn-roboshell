@@ -8,9 +8,8 @@ resource "aws_instance" "test" {
 }
 
 data "aws_ami" "example" {
-  owners           = "973714476881"
+  owners            = "973714476881"
   most_recent      = true
-  name_regex       = "^myami-\\d{3}"
   }
 
 output "ami_id" {
