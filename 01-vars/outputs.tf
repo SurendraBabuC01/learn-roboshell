@@ -21,3 +21,11 @@ output "sample_list_2" {
 output "sample_list_3" {
   value = var.sample_list[2]
 }
+
+output "sample_dic_num1" {
+  value = var.sample_dic["number1"]
+}
+
+output "sample_dic_boolean1" {
+  value = var.sample_dic["boolean1"]
+}

@@ -19,5 +19,13 @@ variable "sample_list" {
   ]
 }
 
+variable "sample_dic" {
+  default = {
+    number1  = 123
+    string1  = "hello"
+    boolean1 = true
+    number2  = 235
+  }
+}
 
 
