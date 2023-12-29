@@ -30,4 +30,8 @@ variable "sample_dic" {
 
 variable "env" {}
 
+variable "num1" {}
+
+variable "sample" {}
+
 
