@@ -33,3 +33,11 @@ output "sample_dic_boolean1" {
 output "env" {
   value = var.env
 }
+
+output "num1" {
+  value = var.num1
+}
+
+output "sample" {
+  value = var.sample
+}
