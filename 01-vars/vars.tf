@@ -28,4 +28,6 @@ variable "sample_dic" {
   }
 }
 
+variable "env" {}
+
 
