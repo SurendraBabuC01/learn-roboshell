@@ -23,5 +23,5 @@ output "all-sg" {
 }
 
 output "single" {
-  value = data.aws_security_group.single.name
+  value = data.aws_security_group.single
 }
