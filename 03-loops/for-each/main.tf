@@ -28,7 +28,7 @@ resource "null_resource" "vegetables" {
 }
 
 resource "null_resource" "fruits" {
-  for_each = var.fruits
+  for_each = toset(var.fruits)
 
   provisioner "local-exec" {
     command = "echo Fruit - ${each.value["name"]} - ${each.value["count"]}"
