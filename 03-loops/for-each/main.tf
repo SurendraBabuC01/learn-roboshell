@@ -15,8 +15,16 @@ variable "fruits" {
   }
 }
 
+variable "fruits1" {
+  default = {
+    name     = apple
+    quantity = 100
+    colour   = red
+  }
+}
+
 variable "vegetables" {
-  default = ["carrot","capsicum","onion"]
+  default = ["carrot", "capsicum", "onion"]
 }
 
 resource "null_resource" "vegetables" {
@@ -32,5 +40,13 @@ resource "null_resource" "fruits" {
 
   provisioner "local-exec" {
     command = "echo Fruit - ${each.value["name"]} - ${each.value["count"]}"
+  }
+}
+
+resource "null_resource" "fruits1" {
+  for_each = var.fruits1
+
+  provisioner "local-exec" {
+    command = "echo Fruit - ${each.value["name"]}"
   }
 }
