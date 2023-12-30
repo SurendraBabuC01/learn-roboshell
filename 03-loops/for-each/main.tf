@@ -20,7 +20,6 @@ resource "null_resource" "fruits" {
 
   provisioner "local-exec" {
     command = "echo Fruit - ${each.value["name"]} - ${each.value["count"]}"
-
   }
 
 }
