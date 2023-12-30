@@ -20,7 +20,7 @@ variable "vegetables" {
 }
 
 resource "null_resource" "vegetables" {
-  for_each = var.vegetables
+  for_each = toset(var.vegetables)
 
   provisioner "local-exec" {
     command = "echo Vegetable is ${each.key}"
@@ -28,7 +28,7 @@ resource "null_resource" "vegetables" {
 }
 
 resource "null_resource" "fruits" {
-  for_each = toset(var.fruits)
+  for_each = var.fruits
 
   provisioner "local-exec" {
     command = "echo Fruit - ${each.value["name"]} - ${each.value["count"]}"
