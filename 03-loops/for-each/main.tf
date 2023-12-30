@@ -15,6 +15,18 @@ variable "fruits" {
   }
 }
 
+variable "vegetables" {
+  default = ["carrot","capsicum","onion"]
+}
+
+resource "null_resource" "vegetables" {
+  for_each = var.vegetables
+
+  provisioner "local-exec" {
+    command = "echo Vegetable is ${each.key}"
+  }
+}
+
 resource "null_resource" "fruits" {
   for_each = var.fruits
 
