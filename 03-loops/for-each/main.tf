@@ -17,9 +17,9 @@ variable "fruits" {
 
 variable "fruits1" {
   default = {
-    name     = apple
+    name     = "apple"
     quantity = 100
-    colour   = red
+    colour   = "red"
   }
 }
 
